@@ -1,0 +1,40 @@
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <img class="logo" src="../assets/img/moviedb-logo.png" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container">
+          <div class="jumbotron">
+              <h1>{{title}}</h1>
+          </div>
+        </div>
+        
+        <div class="input-group col-lg-6 container">
+          <input type="text" class="form-control" placeholder="Search" #inputText/>
+          <span class="input-group-btn">
+              <button class="btn btn-secondary btn-info" type="button" (click)="onSearch(inputText.value)" >Search</button>
+            </span>
+        </div>
+        <div *ngFor="let item of results" style="display: inline-block">
+          <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Footer
+</footer>
+
+
+<router-outlet></router-outlet>
