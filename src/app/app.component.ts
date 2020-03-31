@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'angular-project';
+  title = 'Film kereső';
   apiAddress: string;
   public results: Array<Object> = [];
 
