@@ -24,8 +24,20 @@
               <button class="btn btn-secondary btn-info" type="button" (click)="onSearch(inputText.value)" >Search</button>
             </span>
         </div>
-        <div *ngFor="let item of results" style="display: inline-block">
-          <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="movies">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="text-align: center;">
+        <div *ngFor="let item of results" class="search-movie">
+          <div class="search-movie-box">
+            <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt="">
+            <div class="movie-title">{{item.title}}</div>
+          </div>
         </div>
       </div>
     </div>
